@@ -5,9 +5,20 @@ body {
 }
 h1 {
 	font-size: 50px;
+	text-align: center;
 }
 .wrapper {
 	width: 900px;
+	height: 746px;
 	margin: 0 auto;
-	text-align: center;
+	text-align: right;
+	border: solid white 3px;
+}
+.images {
+	width: 400px;
+	height: 600px;
+	float: left;
+	float: bottom;
+	display: inline-block;
+	border: solid white 3px;
 }
