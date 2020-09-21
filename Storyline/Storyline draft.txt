@@ -1,0 +1,74 @@
+Fourteen beers at chili's.
+
+You are a very thirsty battle hardened man. You wish to drink 14 beers at chili's, but the way to chili's is perilous.
+Sitting at your tv, you can't control yourself anymore. You need these 14 beers.
+
+You:
+(1) Get up (Start the game)
+(2) Give up (Game over)
+(3) Fart (Nothing happens)
+
+  You open your door and walk down the street. Suddenly, you're hit with the realisation that you didn't bring your map.
+  "Ehh, I'll find my way." you proclaim. To your left you see an alley with 2 shady men. To your right is a construction site.
+  (1) Go left
+  (2) Go right
+
+You go left. The shady men approach you. They appear to be ninjas. "Never should have come here". They both wield katanas. You have 20 euros.
+(1) Fight back (50% success)
+(2) Give them your money (Money - 20)
+(3) Dance-off
+
+You are above the alley.
+In the distance you spot chili's in all its glory. This fills you with determination.
+You need to get down. You see a difficult way down, and a balcony with an open door.
+(1) Agility (20% success)
+(2) Jump
+(3) Enter the door
+
+You get down from the rooftop, and are in front of Chili's. The leader of the ninjas awaits you.
+"I'm impressed you have gotten this far. But your journey ends here! Fight me, I dare you!"
+(1) Give up
+(2) Fight (10%)
+(3) Reason
+
+(1) "You can't do this! I only want 14 beers at chili's! (Plead)
+(2) "You won't get away with this!" (Threaten)
+(3) "I shall offer you my services when I have gotten my 14 beers!" (Offer services)
+
+You go right. You examine the construction site, and come to the conclusion that there's 3 ways through. A worker offers you passage
+in exchange for a fair offer. You have 20 euros.
+(1) Offer money
+(2) Parkour up (40% success)
+(3) Threaten the workers
+
+You get through the construction site. You find a poster advertisement for chili's. Just 1 euro for a beer!
+Next to the poster are directions to get to chili's. The directions it gives lead through a dangerous part of town. You decide to:
+(1) Go through town
+(2) Go through the sewers
+(3) Flip
+
+You decide to go through the town.
+You encounter 5 ninjas! They aren't armed, but they're dangerous. You:
+(1) Masterfully defeat the ninjas (50% success)
+(2) Flee
+(3) Dance-off
+
+You get past the ninjas. A stranger offers you a cookie for 10 euros.
+(1) Yes please!
+(2) No.
+
+You arrive at the front of chilis to find it enclosed. There's been a stabbing, but that won't stop you from getting your 14 beers.
+A cop stops you. You:
+(1) Explain the situation
+(2) Fight
+(3) Dance-off
+
+"I'll let you through, you remind me of myself."
+You enter chili's. Finally, you can get your 14 beers. You order 14 beers, but he explains he needs the money first.
+(If money >= 14) GOOD END
+(If money <14) BAD END
+
+You decide to enter the sewers.
+In the sewers you find a giant rat with a crown. He seems to be holding a key of some sort.
+(1) Seize the crown (40%)
+(2) Back off
