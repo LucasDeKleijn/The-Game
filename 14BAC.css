@@ -1,5 +1,5 @@
 body {
-	background-color: #282923;
+	background-color: #2f3029;
 	color: white;
 	font-family: Tahoma;
 }
@@ -8,17 +8,42 @@ h1 {
 	text-align: center;
 }
 .wrapper {
+	background-color: #282923;
 	width: 900px;
-	height: 746px;
+	height: 720px;
 	margin: 0 auto;
 	text-align: right;
 	border: solid white 3px;
+	position: relative;
 }
-.images {
-	float: left;
-	display: inline-block;
-	border: solid white 3px;
-	vertical-align: baseline;
+.LeftSide {
 	max-width: 70%;
-	max-height: 70%;
+	max-height: 82%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: solid white 3px;
+	border-right: solid white 3px;
+}
+.RightSide {
+	width: 46%;
+	text-align: center;
+	height: 500px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	line-height: 20px;
+}
+.Title {
+	border-bottom: solid white 3px;
+	height: 92px;
+}
+.Summary {
+	height: 82px;
+	width: 46%;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	font-size: 19px;
+	text-decoration: underline;
 }
