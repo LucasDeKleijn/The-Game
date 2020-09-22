@@ -15,10 +15,10 @@ h1 {
 	border: solid white 3px;
 }
 .images {
-	width: 400px;
-	height: 600px;
 	float: left;
-	float: bottom;
 	display: inline-block;
 	border: solid white 3px;
+	vertical-align: baseline;
+	max-width: 70%;
+	max-height: 70%;
 }
