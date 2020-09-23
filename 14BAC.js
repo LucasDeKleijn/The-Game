@@ -2,23 +2,29 @@
 money = 20;
 WorkerFail = 1;
 flip = 1;
-Q1 = prompt("You are a very thirsty, battle hardened man. You wish to drink 14 beers at chili's, but the way to chili's is perilous. Sitting at your tv, you can't control yourself anymore. You need those 14 beers. You have 20 bucks.\nYou: \n(1) Get up \n(2) Give up \n(3) Fart")
-if (Q1 == 1) {
+Start();
+function Start() {
+	console.log("Beginning.");
+    Q1 = prompt("You are a very thirsty, battle hardened man. You wish to drink 14 beers at chili's, but the way to chili's is perilous. Sitting at your tv, you can't control yourself anymore. You need those 14 beers. You have 20 bucks.\nYou: \n(1) Get up \n(2) Give up \n(3) Fart")
+	if (Q1 == 1) {
 	GotUp()
-}
-else if (Q1 == 2) {
-  alert("You decide to give up and keep watching tv. You are dissapointed.")
-  document.write("You decide to give up and keep watching tv. <br>You are dissapointed. Bad ending.")
-}
-else if (Q1 == 3) {
-  alert("You fart. Nothing happens. Congratulations.")
-  document.write("You fart. Nothing happens. Bad ending.")
-}
-else {
-	document.write("Wow.")
-	Failure()
+    }
+    else if (Q1 == 2) {
+        alert("You decide to give up and keep watching tv. You are dissapointed.")
+        document.write("You decide to give up and keep watching tv. <br>You are dissapointed. BAD ENDing.")
+    }
+    else if (Q1 == 3) {
+        alert("You fart. Nothing happens. Congratulations.")
+        document.write("You fart. Nothing happens.")
+        Start();
+    }
+    else {
+	    document.write("Wow.")
+	    Failure()
+    }
 }
 function GotUp() {
+	console.log("Got up.");
     alert("You get up and walk out the door.")
     document.write("You get up from your chair and walk out the door.\n")
     Q2 = prompt("You get up from your chair and decide to go get those 14 beers. You open your door and walk down the street. Suddenly, you're hit with the realisation that you didn't bring your map. <Ehh, I'll find my way> you proclaim. To your left you see an alley with 2 shady men. To your right is a construction site.\nYou: \n(1) Go left \n(2) Go right")
@@ -34,35 +40,38 @@ function GotUp() {
     }
 }
 function Left() {
+	console.log("Left side.");
 	alert("You decide to go left.")
 	document.write("<br>You go left, into the alley. <br>Two shady men approach you. <br>They wield katanas and threaten you.")
     Q3 = prompt("You go left, into the alley. The shady men approach you. They appear to be ninjas, wielding katanas. <Never should have come here> they say.\nYou: \n(1) Fight back (50% success)\n(2) Give them your money (money -20)\n(3) Dance-off")
     if (Q3 == 1) {
-var fight = Math.random() * 100;
-if (fight < 50) {
-	document.write("<br> You attack the ninjas. <br>One tries to hit you with his katana. <br>You take it from him and kill him with it. <br>You scare off the second ninja and ditch the katana. <br>You climb up the alley.")
-    	  alert("You attack the ninjas. One tries to hit you with his katana but you take it from him and kill him with it. You scare off the second ninja. You ditch the katana and climb up the alley.")
-    	  AlleySurvive();
-}
-else {
-    	    document.write("<br>You attack the ninjas, but you're outmatched. <br>One hits you with his katana, mortally wounding you. <br>They take your money and leave you to die. BAD END")
-}
-      }
-      else if (Q3 == 2) {
-money = 0
-alert("You give them your money and they let you pass, but you're broke now.")
-document.write("<br>You give them your money, and they let you pass. <br>You're now out of money, but alive. You climb up the alley.")
-AlleySurvive()
-      }
-      else if (Q3 == 3) {
+        var fight = Math.random() * 100;
+        if (fight < 50) {
+	    document.write("<br> You attack the ninjas. <br>One tries to hit you with his katana. <br>You take it from him and kill him with it. <br>You scare off the second ninja and ditch the katana. <br>You climb up the alley.")
+    	alert("You attack the ninjas. One tries to hit you with his katana but you take it from him and kill him with it. You scare off the second ninja. You ditch the katana and climb up the alley.")
+        AlleySurvive();
+        }
+        else {
+        document.write("<br>You attack the ninjas, but you're outmatched. <br>One hits you with his katana, mortally wounding you. <br>They take your money and leave you to die. BAD END")
+        alert("You attack the ninjas, but they defeat you.")
+        }
+    }
+    else if (Q3 == 2) {
+        money = 0
+        alert("You give them your money and they let you pass, but you're broke now.")
+        document.write("<br>You give them your money, and they let you pass. <br>You're now out of money, but alive. You climb up the alley.")
+        AlleySurvive()
+    }
+    else if (Q3 == 3) {
       	alert("You challenge them to a dance-off. They agree, and absolutely destroy your self-confidence by defeating you with ease.")
-document.write("<br>You challenge them to a dance-off. <br>They agree, and start absolutely decimating you. <br>You stood no chance, and died of embarassment. BAD END")
-      }
-      else {
+        document.write("<br>You challenge them to a dance-off. <br>They agree, and start absolutely decimating you. <br>You stood no chance, and died of embarassment. BAD END")
+    }
+    else {
       	Failure()
-      }
+    }
 }
 function AlleySurvive() {
+	console.log("Alley.");
 	document.write("<br>You are above the alley. <br>You see Chili's in the distance. ")
 	Q4 = prompt("You are above the alley. In the distance, you spot Chili's in all its glory. This fills you with determination. You need to get down. You see a difficult way to get down and a balcony with an open door.\n(1) Agility (20% success)\n(2) Jump\n(3) Enter the door")
 	if (Q4 == 1) {
@@ -90,6 +99,7 @@ function AlleySurvive() {
     }
 }
 function DescentSurvive() {
+	console.log("Front Chillis Left Side.");
 	document.write("<br>You are now in front of Chili's. <br>The leader of the ninjas awaits you at the entrance.")
 	Q5 = prompt("You are now in front of Chili's. The leader of the ninjas awaits you. <I'm impressed you've gotten this far, but your journey ends here! Fight me, I dare you!> He says.\nYou:\n(1) Give up\n(2) Fight (10% success)\n(3) Reason")
 	if (Q5 == 1) {
@@ -131,6 +141,7 @@ function DescentSurvive() {
 	}
 }
 function Right() {
+	console.log("Right Side.");
 	document.write("<br>You go right, into the construction site. <br>There's 3 ways through.")
 	Q3 = prompt("You examine the construction site, and come to the conclusion that there's 3 ways through. A worker offers you a way through in exchange for money. You have 20 euros.\nYou:\n(1) Offer money\n(2) Parkour up (40% success)\n(3) Threaten the workers")
 	if (Q3 == 1) {
@@ -186,6 +197,7 @@ function Right() {
 	}
 }
 function ConstructionSurvive() {
+	console.log("Construction Site.");
 	Q4 = prompt("You passed the construction site, and spot a poster advertising Chilis. Just 1 euro for a beer! Next to the poster are directions to get to Chilis. The directions lead through a dangerous part of town. What will you do?\nYou:\n(1) Go through town\n(2) Go through the sewers\n(3) Do a flip")
     if (Q4 == 1) {
     	document.write("<br>You decide to go to Chilis through town.")
@@ -210,6 +222,7 @@ function ConstructionSurvive() {
     }
 }
 function Town() {
+	console.log("Town.");
 	document.write("<br>You encounter 5 ninjas.")
     Q5 = prompt("As you're walking through town, you encounter 5 ninjas! They aren't armed, but they're dangerous.\nYou:\n(1) Masterfully defeat the ninjas (50% success)\n(2) Flee\n(3) Dance-off")
     if (Q5 == 1) {
@@ -238,6 +251,7 @@ function Town() {
     }
 }
 function TownSurvive() {
+	console.log("Cookie Salesman.");
 	Q7 = prompt("You get past the ninjas, and a stranger offers you a cookie foor 10 euros.\nYou:\n(1) Buy a cookie.\n(2) Don't buy a cookie.")
 	if (Q7 == 1) {
 		alert("You buy a cookie.");
@@ -253,6 +267,7 @@ function TownSurvive() {
 	}
 }
 function FrontChilis() {
+	console.log("Front Chilis Right Side.");
 	document.write("<br>You arrive at the front of Chilis.")
 	Q8 = prompt("You arrive at the fron of Chilis to find it enclosed. There's been a stabbing, but that won't stop you from getting your 14 beers. A cop stops you.\nYou:\n(1) Explain the situation\n(2) Fight\n(3) Dance-off")
 	if (Q8 == 1) {
@@ -273,6 +288,7 @@ function FrontChilis() {
 	}
 }
 function Sewers() {
+	console.log("Sewers.");
 	Q6 = prompt("In the sewers you find a giant rat with a crown. He seems to be holding a key of some sort.\nYou:\n(1) Seize the crown (40% success)\n(2) Back off")
 	if (Q6 == 1) {
 		rat = Math.random() * 100;
@@ -295,6 +311,7 @@ function Sewers() {
 	}
 }
 function Chilis() {
+	console.log("Chilis.");
 	document.write("<br>You enter Chili's. The bartender asks for money.")
 	alert("You enter chilis. Finally, you can get your 14 beers. You order 14 beers, but the bartender explains he needs the money first.")
 	if (money <= 13) {
@@ -307,6 +324,10 @@ function Chilis() {
 	}
 }
 function Failure() {
+	console.log("Incompetence.");
 	document.write("<br>You couldn't input a number and should rethink your life choices.")
 	alert("You're so incompetent, you couldn't input a number. The story ends without a conclusion.")
+}
+function Refresh() {
+	window.location.href = window.location.href.split( '#' )[0];
 }
